@@ -8,10 +8,23 @@ public class Register {
 		// TODO Auto-generated method stub
 		
 		Scanner n = new Scanner(System.in);
+		
 		String state = "KL";
-		String district = " ";
+		
+		System.out.println("State : "+state);
 		System.out.println("Enter the sub number : ");
 		int dis = n.nextInt();
+		
+		System.out.println("Enter remaining number : ");
+		String n3 = n.next();
+		
+		System.out.println("The reg number is :"+state+" "+dis+" "+n3);
+		System.out.println("State : Kerala");
+		System.out.println("District is : " + district(dis));
+	}
+	
+	public static String district(int dis) {
+		String district="";
 		switch(dis) {
 		case 1: district = "Thiruvananthapuram";
 				break;
@@ -32,12 +45,8 @@ public class Register {
 		default: System.out.println("invalid code");
 		        break;
 		}
-		System.out.println("Enter remaining number: ");
-		String n3 =  n.next();
-		System.out.println("The reg number is :"+state+" "+district+" "+n3);
-		System.out.println("State:Kerala");
-		System.out.println("District is: "+district);
+		return district;
+		
 	}
 
 }
-
